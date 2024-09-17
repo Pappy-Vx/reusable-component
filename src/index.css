@@ -1,0 +1,325 @@
+:root {
+
+}
+
+.AccordionRoot {
+background: black;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 50%;
+}
+
+
+.AccordionTrigger {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.AccordionChevron {
+  transition: transform 0.2s ease-in-out;
+}
+
+[aria-expanded="true"] .AccordionChevron {
+  transform: rotate(180deg);
+}
+
+.AccordionContent {
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.AccordionContentText {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.AlertDialogOverlay {
+  background-color: rgba(0, 0, 0, 0.071);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.AlertDialogContent {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 500px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.AlertDialogContent:focus {
+  outline: none;
+}
+
+.AlertDialogTitle {
+  margin: 0;
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.AlertDialogDescription {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  font-weight: 500;
+  height: 35px;
+}
+
+.Button.red {
+  background-color: red;
+  color: #fff;
+}
+.Button.red:hover {
+  background-color: rgb(242, 77, 77);
+  cursor: pointer;
+}
+.Button.red:focus {
+  box-shadow: 0 0 0 2px rgb(242, 77, 77);
+}
+.Button.green {
+  background-color: green;
+  color: #fff;
+}
+.Button.green:hover {
+  background-color: rgb(122, 228, 122);
+}
+.Button.green:focus {
+  box-shadow: 0 0 0 2px rgb(122, 228, 122);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.title {
+  color: purple;
+  background-color: #000;
+}
+
+.AvatarRoot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #e1e1e1;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+}
+
+.AvatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.AvatarFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+}
+.CollapsibleRoot {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #282c34;
+  width: 50%;
+}
+
+.IconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.Text {
+  font-size: 16px;
+  color: white;
+}
+
+
+.CollapsibleContent {
+  padding-top: 10px;
+}
+
+.CollapsibleTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.DialogOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogTitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.DialogDescription {
+  margin: 10px 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.Fieldset {
+  all: unset;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.Label {
+  font-size: 15px;
+  color: #333;
+  width: 75px;
+}
+
+.Input {
+  all: unset;
+  width: 100%;
+  padding: 0 10px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #ddd;
+  font-size: 15px;
+  line-height: 1;
+  color: #333;
+  transition: box-shadow 0.2s;
+}
+
+.Input:focus {
+  box-shadow: 0 0 0 2px #7c3aed;
+}
+
+.DialogTrigger {
+  all: unset;
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 35px;
+  border-radius: 4px;
+  background-color: #7c3aed;
+  color: white;
+}
+
+.Button.green {
+  background-color: #4ade80;
+}
+
+.Button.violet {
+  background-color: #8b5cf6;
+}
+
+.CancelButton {
+  all: unset;
+  font-family: inherit;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
