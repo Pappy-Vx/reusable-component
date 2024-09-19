@@ -1,6 +1,8 @@
 export interface DropdownMenuProps {
     children: React.ReactNode;
     asChild?: boolean;
+    open?: boolean;
+    onOpenChange?: (open: boolean) => void;
   }
   
   export interface DropdownMenuItemProps {
@@ -9,9 +11,14 @@ export interface DropdownMenuProps {
     children: React.ReactNode;
   }
   
-  export interface DropdownMenuSubProps {
+  export interface DropdownMenuTriggerProps {
     children: React.ReactNode;
     className?: string;
+  }
+  
+  export interface DropdownMenuContentProps {
+    className?: string;
+    children: React.ReactNode;
   }
   
   export interface DropdownMenuCheckboxItemProps {
@@ -32,5 +39,10 @@ export interface DropdownMenuProps {
     value: string;
     className?: string;
     children: React.ReactNode;
+  }
+  
+  export interface DropdownMenuSubProps {
+    children: React.ReactNode;
+    className?: string;
   }
   
