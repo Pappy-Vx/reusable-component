@@ -29,8 +29,8 @@ const DropdownMenuExam = () => {
             {open ?  <Cross2Icon /> :  <HamburgerMenuIcon />}
         </DropdownMenuTrigger>
   
-          <DropdownMenuContent className="DropdownMenuContent">
-            <DropdownMenuItem className="DropdownMenuItem">
+          <DropdownMenuContent >
+            <DropdownMenuItem >
               New Tab <div className="RightSlot">⌘+T</div>
             </DropdownMenuItem>
             <DropdownMenu.Separator className="DropdownMenuSeparator" />
