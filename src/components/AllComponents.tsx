@@ -4,6 +4,7 @@ import AvatarExample from "./avatar/AvatarExample";
 import CollapsibleExam from "./collapsible/CollapsibleExam";
 import DialogExample from "./dialog/DialogExample";
 import DropdownMenuExam from "./dropdownmenu/DropdownMenuExam";
+import FormExample from "./form/FormExample";
 import MenuBarExam from "./menubar/MenuBarExam";
 
 const AllComponents = () => {
@@ -16,6 +17,7 @@ const AllComponents = () => {
       <AvatarExample />
       <CollapsibleExam />
       <DialogExample />
+      <FormExample />
     </div>
   );
 };
