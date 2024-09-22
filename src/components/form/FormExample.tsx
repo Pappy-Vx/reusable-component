@@ -31,7 +31,7 @@ const FormExample = () => {
   };
   return (
     <div>
-      FormExample
+      <h1>Form Example  </h1>
       <FormComponent onSubmit={handleSubmit(onSubmit)} className="tutorial">
         <FormField
           name="email"

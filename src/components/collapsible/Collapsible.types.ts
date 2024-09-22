@@ -18,4 +18,6 @@ export interface CollapsibleProps {
     className?: string;
     children: React.ReactNode;
   }
-  
+  export interface CounterProps {
+    value: number;
+  }

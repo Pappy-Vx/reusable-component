@@ -18,7 +18,7 @@ export const FormField: FC<FormFieldProps> = ({ name, label, type = 'text', clas
     <Form.Field name={name} className={clsx('FormField', className)}>
       {label && <Form.Label className="FormLabel">{label}</Form.Label>}
       <Form.Control asChild>
-        <input {...register(name)} type={type} className={clsx('FormControl', error && 'FormControlError')} />
+        <input {...register(name)} type={type}  className={clsx('FormControl', error && 'FormControlError')} />
       </Form.Control>
       {error && <FormMessage message={error} className="FormErrorMessage" />}
     </Form.Field>
